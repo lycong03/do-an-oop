@@ -9,16 +9,18 @@ package qlbh.model;
  * @author congl
  */
 public class DanhMuc {
-    private String MaDM;
+    private int MaDM;
     private String TenDM;
 
-    public String getMaDM() {
+    public int getMaDM() {
         return MaDM;
     }
 
-    public void setMaDM(String MaDM) {
+    public void setMaDM(int MaDM) {
         this.MaDM = MaDM;
     }
+
+
 
     public String getTenDM() {
         return TenDM;

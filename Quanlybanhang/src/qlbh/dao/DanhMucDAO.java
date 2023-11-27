@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package qlbh.dao;
+
 import qlbh.model.DanhMuc;
 import java.util.List;
 /**
@@ -10,5 +11,7 @@ import java.util.List;
  * @author congl
  */
 public interface DanhMucDAO {
-        public List<DanhMuc> getList();
+    public List<DanhMuc> getList();
+    public int createOrUpdate(DanhMuc danhMuc);
+    public void xoa(int id);
 }

@@ -33,7 +33,6 @@ public class ClassTableModel {
                 obj[5] = khachHang.getSDT();
                 obj[6] = khachHang.getDiaChi();
                 obj[7] = khachHang.getEmail();
-                obj[8] = khachHang.getTKNH();
                 dtm.addRow(obj);
             }
         }

@@ -11,4 +11,5 @@ import java.util.List;
  */
 public interface HoaDonDAO {
         public List<HoaDon> getList();
+        public int createOrUpdate(HoaDon hoaDon);
 }

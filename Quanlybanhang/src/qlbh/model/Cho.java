@@ -10,33 +10,21 @@ import java.sql.Date;
  */
 public class Cho {
     
-    private String MaC;
+    private int MaC;
     private String TenC;
-    private String MaDM;
+    private int MaDM;
     private Date NgaySinhC;
     private boolean GioiTinhC;
-    private String MauSac;
     private String CanNang;
-    private boolean TinhTrangTiemChung;
-    private boolean TinhTrang;
     private int GiaTien;
     private String MoTa;
 
-
-    public String getMaC() {
+    public int getMaC() {
         return MaC;
     }
 
-    public void setMaC(String MaC) {
+    public void setMaC(int MaC) {
         this.MaC = MaC;
-    }
-
-    public String getMaDM() {
-        return MaDM;
-    }
-
-    public void setMaDM(String MaDM) {
-        this.MaDM = MaDM;
     }
 
     public String getTenC() {
@@ -45,6 +33,14 @@ public class Cho {
 
     public void setTenC(String TenC) {
         this.TenC = TenC;
+    }
+
+    public int getMaDM() {
+        return MaDM;
+    }
+
+    public void setMaDM(int MaDM) {
+        this.MaDM = MaDM;
     }
 
     public Date getNgaySinhC() {
@@ -63,14 +59,6 @@ public class Cho {
         this.GioiTinhC = GioiTinhC;
     }
 
-    public String getMauSac() {
-        return MauSac;
-    }
-
-    public void setMauSac(String MauSac) {
-        this.MauSac = MauSac;
-    }
-
     public String getCanNang() {
         return CanNang;
     }
@@ -78,24 +66,6 @@ public class Cho {
     public void setCanNang(String CanNang) {
         this.CanNang = CanNang;
     }
-
-    public boolean isTinhTrangTiemChung() {
-        return TinhTrangTiemChung;
-    }
-
-    public void setTinhTrangTiemChung(boolean TinhTrangTiemChung) {
-        this.TinhTrangTiemChung = TinhTrangTiemChung;
-    }
-
-    public boolean isTinhTrang() {
-        return TinhTrang;
-    }
-
-    public void setTinhTrang(boolean TinhTrang) {
-        this.TinhTrang = TinhTrang;
-    }
-
-
 
     public int getGiaTien() {
         return GiaTien;
@@ -112,6 +82,7 @@ public class Cho {
     public void setMoTa(String MoTa) {
         this.MoTa = MoTa;
     }
+
     
     
 }

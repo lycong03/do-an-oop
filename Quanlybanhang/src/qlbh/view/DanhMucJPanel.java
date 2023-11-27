@@ -4,6 +4,8 @@
  */
 package qlbh.view;
 
+import qlbh.controller.QuanLyDanhMucController;
+
 /**
  *
  * @author congl
@@ -15,6 +17,10 @@ public class DanhMucJPanel extends javax.swing.JPanel {
      */
     public DanhMucJPanel() {
         initComponents();
+        
+        QuanLyDanhMucController controller = new QuanLyDanhMucController(jpnViewDM,btnAddDM,jtfSearchDM);
+        controller.setDateToTableDanhMuc();
+        controller.setEvent();
     }
 
     /**
@@ -26,35 +32,102 @@ public class DanhMucJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jpnRootDM = new javax.swing.JPanel();
+        jtfSearchDM = new javax.swing.JTextField();
+        btnAddDM = new javax.swing.JButton();
+        jpnViewDM = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jtfSearchDM.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jtfSearchDM.setText("\n");
+        jtfSearchDM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfSearchDMActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 866, Short.MAX_VALUE)
+        btnAddDM.setBackground(new java.awt.Color(204, 255, 255));
+        btnAddDM.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnAddDM.setText("+ Thêm mới");
+        btnAddDM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 255, 0), null, null));
+        btnAddDM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddDMActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpnViewDMLayout = new javax.swing.GroupLayout(jpnViewDM);
+        jpnViewDM.setLayout(jpnViewDMLayout);
+        jpnViewDMLayout.setHorizontalGroup(
+            jpnViewDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 597, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 512, Short.MAX_VALUE)
+        jpnViewDMLayout.setVerticalGroup(
+            jpnViewDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 288, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jpnRootDMLayout = new javax.swing.GroupLayout(jpnRootDM);
+        jpnRootDM.setLayout(jpnRootDMLayout);
+        jpnRootDMLayout.setHorizontalGroup(
+            jpnRootDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnRootDMLayout.createSequentialGroup()
+                .addGroup(jpnRootDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnRootDMLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jpnViewDM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpnRootDMLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jtfSearchDM, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
+                        .addComponent(btnAddDM, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jpnRootDMLayout.setVerticalGroup(
+            jpnRootDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnRootDMLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jpnRootDMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfSearchDM, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddDM, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jpnViewDM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jpnRootDM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jpnRootDM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtfSearchDMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSearchDMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfSearchDMActionPerformed
+
+    private void btnAddDMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddDMActionPerformed
+    // Variables declaration - do not modify
+    // Variables declaration - do not modify
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btnAddDM;
+    private javax.swing.JPanel jpnRootDM;
+    private javax.swing.JPanel jpnViewDM;
+    private javax.swing.JTextField jtfSearchDM;
     // End of variables declaration//GEN-END:variables
+
 }

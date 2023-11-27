@@ -37,7 +37,7 @@ public class QuanLyKhachHangController {
 
     private KhachHangService khachHangService = null;
     
-    private String[] listColumn = {" STT","Ma Khach Hang","Ho va ten","Ngay sinh","Gioi Tinh","sdt","dia chi","email","tknh"};
+    private String[] listColumn = {"stt","Mã khách hàng","Tên khách hàng","Ngày sinh","Giới tính","SDT","Địa chỉ","email"};
     
     private TableRowSorter<TableModel> rowSorter = null;
     
@@ -88,8 +88,8 @@ public void setDateToTable() {
     table.getColumnModel().getColumn(0).setMaxWidth(0);
     table.getColumnModel().getColumn(0).setPreferredWidth(0);
     
-    table.getColumnModel().getColumn(1).setMinWidth(80);
-    table.getColumnModel().getColumn(1).setMaxWidth(80);
+    table.getColumnModel().getColumn(1).setMinWidth(120);
+    table.getColumnModel().getColumn(1).setMaxWidth(120);
     table.getColumnModel().getColumn(1).setPreferredWidth(80);
     
     table.addMouseListener(new MouseAdapter(){
@@ -101,16 +101,15 @@ public void setDateToTable() {
                 selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
                 
                 KhachHang khachHang = new KhachHang();
-                khachHang.setMaKH(model.getValueAt(selectedRowIndex,1).toString());
+                khachHang.setMaKH((int)model.getValueAt(selectedRowIndex,1));
                 khachHang.setTenKH(model.getValueAt(selectedRowIndex, 2).toString());
                 khachHang.setNgaySinh((Date) model.getValueAt(selectedRowIndex, 3));
                 khachHang.setGioiTinh(model.getValueAt(selectedRowIndex, 4).toString().equalsIgnoreCase("Nam"));
                 khachHang.setSDT(model.getValueAt(selectedRowIndex, 5).toString());
                 khachHang.setEmail(model.getValueAt(selectedRowIndex, 6).toString());
-                khachHang.setTKNH(model.getValueAt(selectedRowIndex, 7).toString());
-                khachHang.setDiaChi(model.getValueAt(selectedRowIndex, 8).toString());
+                khachHang.setDiaChi(model.getValueAt(selectedRowIndex, 7).toString());
                 KhachHangJFrame frame = new KhachHangJFrame(khachHang);
-                frame.setTitle("Thong tin khach hang");
+                frame.setTitle("Thong Tin Khach Hang");
                 frame.setResizable(false);
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);

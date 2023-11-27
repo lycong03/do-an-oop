@@ -10,4 +10,5 @@ public interface KhachHangService {
     
     public List<KhachHang> getList();
     public int createOrUpdate(KhachHang khachHang);
+    public void xoa(int id);
 }

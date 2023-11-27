@@ -9,20 +9,19 @@ import java.sql.Date;
  * @author congl
  */
 public class KhachHang {
-    private String MaKH;
+    private int MaKH;
     private String TenKH;
     private Date NgaySinh;
     private boolean GioiTinh;
     private String DiaChi;
     private String SDT;
     private String Email;
-    private String TKNH;
 
-    public String getMaKH() {
+    public int getMaKH() {
         return MaKH;
     }
 
-    public void setMaKH(String MaKH) {
+    public void setMaKH(int MaKH) {
         this.MaKH = MaKH;
     }
 
@@ -74,12 +73,5 @@ public class KhachHang {
         this.Email = Email;
     }
 
-    public String getTKNH() {
-        return TKNH;
-    }
-
-    public void setTKNH(String TKNH) {
-        this.TKNH = TKNH;
-    }
     
 }

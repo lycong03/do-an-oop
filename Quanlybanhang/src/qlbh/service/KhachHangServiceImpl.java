@@ -14,7 +14,7 @@ public class KhachHangServiceImpl implements KhachHangService {
     private KhachHangDAO khachHangDAO = null;
     
     public KhachHangServiceImpl() {
-        khachHangDAO = new KhachHangDAOImpl();
+        this.khachHangDAO = new KhachHangDAOImpl();
     }
     @Override
     public List<KhachHang> getList() {
@@ -25,5 +25,8 @@ public class KhachHangServiceImpl implements KhachHangService {
     public int createOrUpdate(KhachHang khachHang) {
         return khachHangDAO.createOrUpdate(khachHang);
     }
-    
+    @Override
+    public void xoa(int id) {
+        khachHangDAO.xoa(id);
+    }
 }

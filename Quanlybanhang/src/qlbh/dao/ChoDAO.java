@@ -11,5 +11,7 @@ import java.util.List;
  * @author congl
  */
 public interface ChoDAO {
-        public List<Cho> getList();
+    public List<Cho> getList();
+    public int createOrUpdate(Cho cho);
+    public void xoa(int id);
 }

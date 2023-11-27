@@ -9,36 +9,36 @@ import java.sql.Date;
  * @author congl
  */
 public class HoaDon {
-    private String MaHD;
-    private String MaC;
-    private String MaKH;
+    private int MaHD;
+    private int MaC;
+    private int MaKH;
     private int SoLuong;
     private Date NgayLapHD;
-    private Boolean TinhTrangHD;
-    private boolean PTTT;
+    private String TinhTrangHD;
+    private String PTTT;
     private int TongTien;
 
-    public String getMaHD() {
+    public int getMaHD() {
         return MaHD;
     }
 
-    public void setMaHD(String MaHD) {
+    public void setMaHD(int MaHD) {
         this.MaHD = MaHD;
     }
 
-    public String getMaC() {
+    public int getMaC() {
         return MaC;
     }
 
-    public void setMaC(String MaC) {
+    public void setMaC(int MaC) {
         this.MaC = MaC;
     }
 
-    public String getMaKH() {
+    public int getMaKH() {
         return MaKH;
     }
 
-    public void setMaKH(String MaKH) {
+    public void setMaKH(int MaKH) {
         this.MaKH = MaKH;
     }
 
@@ -58,19 +58,19 @@ public class HoaDon {
         this.NgayLapHD = NgayLapHD;
     }
 
-    public Boolean getTinhTrangHD() {
+    public String getTinhTrangHD() {
         return TinhTrangHD;
     }
 
-    public void setTinhTrangHD(Boolean TinhTrangHD) {
+    public void setTinhTrangHD(String TinhTrangHD) {
         this.TinhTrangHD = TinhTrangHD;
     }
 
-    public boolean isPTTT() {
+    public String getPTTT() {
         return PTTT;
     }
 
-    public void setPTTT(boolean PTTT) {
+    public void setPTTT(String PTTT) {
         this.PTTT = PTTT;
     }
 
@@ -81,5 +81,6 @@ public class HoaDon {
     public void setTongTien(int TongTien) {
         this.TongTien = TongTien;
     }
+    
     
 }
